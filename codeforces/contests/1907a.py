@@ -1,4 +1,9 @@
 
+#Solution during the contest: 
+# Time: n 
+# Space: 1 ( if we don't count the space for input)
+# Topics: Implementation
+
 def main(): 
     s = input()
     ch = s[0] 
