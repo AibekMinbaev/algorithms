@@ -14,7 +14,7 @@ for _ in range(int(input())):
         if v == 1: 
             arr.append(k) 
 
-    arr.sort()
+    arr.sort()  
     arr.reverse()
 
     print(arr) 
