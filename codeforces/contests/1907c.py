@@ -1,31 +1,17 @@
-from collections import Counter
+# Solution after upsolving
+# Time: n 
+# Space: n 
+# Topics: Implementatino 
+# Notes: The deletion order does not matter. If some amount of some char is greater than n//2 then that number will remain. 
 
-res = [] 
+
+orda = ord("a") 
 for _ in range(int(input())): 
-    n = int(input())
+    n = int(input()) 
     s = input()
-    d = Counter(s) 
-    arr = list(d.values())
-    arr.sort() 
+    cnt = [0] * 26 # for all chars in english 
+    for char in s: 
+        cnt[ord(char) - orda] += 1 
+    mx = max(cnt) # elem that appears most 
 
-    d1 = Counter(arr) 
-    arr = [] 
-    for k, v in d1.items(): 
-        if v == 1: 
-            arr.append(k) 
-
-    arr.sort()  
-    arr.reverse()
-
-    print(arr) 
-    cnt = 0 
-    if arr: 
-        cnt = arr[0] 
-        for i in range(1, len(arr)): 
-            if cnt > 0: 
-                cnt -= arr[i] 
-            else: 
-                cnt = arr[i] + abs(cnt) 
-    # print(cnt) 
-    res.append(cnt) 
-print(res) 
+    print(max(n % 2, 2 * mx - n)) 
