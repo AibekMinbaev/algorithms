@@ -1,3 +1,11 @@
+#Solution after upsolving: 
+# Time: nlog 
+# Space: n 
+# Topics: binary search 
+
+# Todo: Upsolve 
+
+res = [] 
 for _ in range(int(input())): 
     n = int(input())  
     input_arr = list(map(int, input().split())) 
@@ -9,33 +17,25 @@ for _ in range(int(input())):
         sm += num 
         pref_sum.append(sm) 
     
-    d = {} 
-    ans = n - 1
-    for i in range(n-1, -1, -1): 
-        if arr[i] not in d:
-            d[arr[i]] = ans
-            if i > 0 and pref_sum[i-1] < arr[i]: 
-                ans = i - 1
-            
+    d = {}
+    for i in range(len(arr)): 
+        target = pref_sum[i] 
+    
+        l, r = i, len(arr) - 1 
+
+        while l < r: 
+            m = (l + r) // 2 
+
+            if arr[m] <= target: 
+                l = m + 1
+            else: 
+                r = m - 1
+        d[arr[i]] = l
+
+    temp = []       
     for elem in input_arr: 
         print(d[elem]) 
-    
-
-    
+        temp.append(d[elem])
+    res.append(temp) 
+print(res) 
      
-
-
-      # d = {}
-    # for i in range(len(arr)-1, -1, -1): 
-    #     target = pref_sum[i] 
-    
-    #     l, r = 0, len(arr) - 1 
-
-    #     while l <= r: 
-    #         m = (l + r) // 2 
-
-    #         if arr[m] <= target: 
-    #             d[arr[i]] = m 
-    #             l = m + 1
-    #         else: 
-    #             r = m - 1 

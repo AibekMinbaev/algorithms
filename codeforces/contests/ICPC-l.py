@@ -1,3 +1,5 @@
+# Status: Solved 
+
 import collections 
 
 n = int(input()) 
