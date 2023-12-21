@@ -1,5 +1,4 @@
 # Solution after upsolving:
-
 def main(): 
     n = int(input()) 
     s = input() 
