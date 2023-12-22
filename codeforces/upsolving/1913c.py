@@ -13,8 +13,6 @@ for _ in range(int(input())):
 
 
 
-
-
 for elem in ans: 
     if elem: 
         print("YES") 
