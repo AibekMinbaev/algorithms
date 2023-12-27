@@ -1,10 +1,10 @@
 # Problems solved 
 
 # Codeforces: 
-A - 10 
-B - 2
-C - 1 
-D - 0 
+A - 53 
+B - 16 
+C - 3
+D - 3
 
 # Leetcode: 
-neetcode - 12/150
+neetcode - 23/150 

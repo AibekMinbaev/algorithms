@@ -14,9 +14,9 @@ def rec(st, s):
 for _ in range(int(input())): 
     n = int(input()) 
     s = input() 
+    if s: 
+        st = set()  
+        rec(st, s)  
 
-    st = set()  
-    rec(st, s)  
-
-    print(len(st)) 
+        print(len(st)) 
 
