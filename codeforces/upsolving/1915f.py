@@ -1,5 +1,6 @@
-
-# TLE during contest 
+#Unsolved: Solution during the contest: 
+# Notes: Got TLE during the contest 
+# Time: n ^ 2 
 
 for _ in range(int(input())): 
     n = int(input()) 

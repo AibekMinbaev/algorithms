@@ -1,3 +1,4 @@
+#Solved: Contest Solution 
 import math 
 
 for _ in range(int(input())): 

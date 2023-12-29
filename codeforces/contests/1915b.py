@@ -1,3 +1,4 @@
+# Solved: Contest Solution 
 for _ in range(int(input())): 
     a = set(input())
     b = set(input())
