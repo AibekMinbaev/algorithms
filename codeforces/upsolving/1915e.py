@@ -1,10 +1,18 @@
+# Solution: after upsolving 
+# Time: n 
+# Space: n 
+# Topics: prefix sum 
+# Notes: in python dictionary it is faster to use string as a key rather than int as a key 
+
 for _ in range(int(input())): 
     n = int(input()) 
     arr = list(map(int, input().split())) 
 
-    d = {0:1} 
+    d = set()
+    d.add(0) 
+
     sm = 0 
-    res = "NO"
+    res = "NO"  
 
     for i in range(n): 
         if i % 2 == 0: 
@@ -15,6 +23,6 @@ for _ in range(int(input())):
         if sm in d: 
             res = "YES" 
             break 
-        d[sm] = 1 
+        d.add(sm) 
 
     print(res)
