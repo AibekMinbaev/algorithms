@@ -5,7 +5,7 @@ mn, mx = [],[]
 
 for i in range(m): 
 
-    for j in range(0, 10): 
+    for j in range(0, 10):  
         if i == 0 and j == 0: 
             continue 
 
@@ -22,9 +22,6 @@ for i in range(m):
             mx.append(k) 
             s2 -= k
             break 
-    else: 
-        mx.append(0) 
-
 
 if sum(mx) != s or sum(mn) != s or (len(mx) != 1 and mx[0] == 0) or (len(mn) != 1 and mn[0] == 0): 
     print(-1,-1) 
