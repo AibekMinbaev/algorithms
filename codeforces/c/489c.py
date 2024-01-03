@@ -1,33 +1,33 @@
 m, s = map(int, input().split()) 
 
-a = s // 9 
-b = s % 9  
+s1 = s2 = s 
+mn, mx = [],[] 
 
-mx = "" 
-temp = a + (1 if b else 0) 
-if temp > m or (s == 0 and m != 1): 
-    print(-1, -1)  
-else: 
-    dif = m - temp 
-    h = a * 9 + b 
-    if (h - dif) < 0: 
-        print(-1, -1) 
+for i in range(m): 
 
+    for j in range(0, 10): 
+        if i == 0 and j == 0: 
+            continue 
+
+        if s1 - j >= 0 and (s1 - j) / 9 <= m - i - 1: 
+            mn.append(j)
+            s1 -= j 
+            break  
     else: 
-        w = (h - dif) // 9 
-        wl = (h - dif) % 9 
+        mn.append(0) 
+    
 
-        for i in range(w): 
-            mx += "9" 
-        
-        if wl != 0: 
-            mx += str(wl)  
-        
-        for i in range(dif): 
-            mx += "1"
-        
-        if mx: 
-            print(int(mx[:][::-1]), int(mx)) 
-        else: 
-            print(0, 0)
-        
+    for k in range(9, -1, -1):   
+        if s2 - k >= 0:  
+            mx.append(k) 
+            s2 -= k
+            break 
+    else: 
+        mx.append(0) 
+
+
+if sum(mx) != s or sum(mn) != s or (len(mx) != 1 and mx[0] == 0) or (len(mn) != 1 and mn[0] == 0): 
+    print(-1,-1) 
+else: 
+    print("".join(map(str, mn)), "".join(map(str,mx))) 
+
