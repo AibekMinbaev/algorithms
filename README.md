@@ -7,7 +7,7 @@ Welcome to my competitive programming repository! This is where I share my solut
 - **Algorithms-Data Structures:** This directory contains implementations of various algorithms and data structures.
 - **python-features:** Implementation and testing of Python language features.
 - **codeforces:** Solutions to competitive programming contests and problems on Codeforces.
-- **leetcode: ** Solutions to problems from Leetcode. 
+- **leetcode:** Solutions to problems from Leetcode. 
 
 
 ## Competitive Programming Platforms
@@ -16,7 +16,8 @@ I actively participate in the following platforms:
 
 - [Codeforces](https://codeforces.com/)
 - [LeetCode](https://leetcode.com/)
-- 
+
+  
 ## How to Navigate
 
 - Browse through the directories to find solutions based on topics, algorithms, or data structures.
